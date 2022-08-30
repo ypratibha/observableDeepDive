@@ -1,0 +1,24 @@
+<p>
+  User with <strong>ID {{ id }}</strong> was loaded
+</p>
+
+<button class="btn btn-default" (click)="onActivate()">Activate</button>
+
+<form>
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" #tempname />
+  </div>
+  <div class="form-group">
+    <label>Age</label>
+    <input type="number" #tempage />
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-default"
+    (click)="onSubmit(tempname.value, tempage.value)"
+  >
+    Submit
+  </button>
+</form>
